@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Colorful</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">📊</div>
+      <div>
+        <h1>Vibrant Dashboard</h1>
+        <p class="muted">Inventory Insights</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" class="navlink">Inventory</a>
+      <a href="dashboard.html" class="navlink">Dashboard</a>
+      <a href="README.html" class="navlink">README</a>
+    </nav>
+  </header>
+
+  <main class="container dashboard-grid">
+    <section class="card chart-card">
+      <h2>Value by Category</h2>
+      <canvas id="valueByCategory" height="140"></canvas>
+    </section>
+
+    <section class="card chart-card">
+      <h2>Top Items by Quantity</h2>
+      <canvas id="topQty" height="140"></canvas>
+    </section>
+
+    <section class="card small snapshot">
+      <h3>Snapshot</h3>
+      <ul>
+        <li>Total items: <strong id="snapItems">0</strong></li>
+        <li>Total categories: <strong id="snapCategories">0</strong></li>
+        <li>Total inventory value: ₹<strong id="snapValue">0.00</strong></li>
+      </ul>
+    </section>
+
+    <section class="card small legend-card">
+      <h3>Legend</h3>
+      <p class="muted">Charts use vibrant gradients. Update inventory to refresh.</p>
+    </section>
+  </main>
+
+  <footer class="footer">Colorful Dashboard • Data from localStorage</footer>
+
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>
